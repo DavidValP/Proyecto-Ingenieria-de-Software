@@ -2,4 +2,4 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 def Galeria(request):
-    return HttpResponse('Galerias')
+    return render(request, 'Galerias/galeria.html')
