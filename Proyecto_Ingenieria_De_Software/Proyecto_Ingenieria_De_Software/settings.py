@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Contacto',
     'Principal',
     'Galeria',
+    'Mascota',
 ]
 
 MIDDLEWARE = [
