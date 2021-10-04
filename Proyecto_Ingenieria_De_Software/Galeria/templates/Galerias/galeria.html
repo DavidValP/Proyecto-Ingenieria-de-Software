@@ -9,4 +9,33 @@
     
 </section>
 
+
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tamaño</th>
+        <th scope="col">Raza</th>
+        <th scope="col">Color</th>
+        <th scope="col">Edad</th>
+    </tr>
+    </thead>
+
+{% for i in mascotas %}
+    <tbody>
+    <tr>
+        <th scope="row">{{i.nombre}}</th>
+        <td>{{i.tamaño}}</td>
+        <td>{{i.raza}}</td>
+        <td>{{i.color_pelaje}}</td>
+        <td>{{i.edad}}</td>
+        
+    </tr>
+    </tbody>
+
+{% endfor %}
+</table>
+
+
 {% endblock %}

@@ -1,5 +1,9 @@
-from django.shortcuts import render, HttpResponse
 
+from django.shortcuts import render, HttpResponse
+from Mascota.models import Perrito
 # Create your views here.
 def Galeria(request):
-    return render(request, 'Galerias/galeria.html')
+
+    mascotas = Perrito.objects.all()#importamos todos los registros de perritos
+
+    return render(request, 'Galerias/galeria.html', {'mascotas':mascotas})
