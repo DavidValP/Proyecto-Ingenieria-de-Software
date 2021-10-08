@@ -12,13 +12,13 @@ class Tamaño(models.Model):
     def __str__(self):
         return self.tamaños
 
+
 class Perrito(models.Model):
     nombre = models.CharField(max_length=20, null=True, blank=True)
     raza = models.CharField(max_length=40)
     color_pelaje = models.CharField(max_length=20, null=True, blank=True)
     tamaño = models.ForeignKey(Tamaño, on_delete=models.CASCADE)    
     edad = models.IntegerField(null=True, blank=True)
-    imagenes = models.ImageField(upload_to='media/mascota_imagenes',null=True, blank=True)
 
     class Meta:
         verbose_name = 'Perrito'
@@ -26,3 +26,11 @@ class Perrito(models.Model):
 
     def __str__(self):
         return self.nombre
+
+class PerritoImagenes(models.Model):
+    perrito = models.ForeignKey(Perrito, on_delete=models.CASCADE)
+    imagen = models.ImageField(upload_to='media/mascota_imagenes',null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Imagen'
+        verbose_name_plural = 'Imagenes'
