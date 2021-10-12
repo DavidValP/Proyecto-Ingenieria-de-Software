@@ -29,7 +29,9 @@ class Perrito(models.Model):
 
 class PerritoImagenes(models.Model):
     perrito = models.ForeignKey(Perrito, on_delete=models.CASCADE)
-    imagen = models.ImageField(upload_to='media/mascota_imagenes',null=True, blank=True)
+    imagen = models.ImageField(upload_to="perritos", null=True, blank=True)
+
+
 
     class Meta:
         verbose_name = 'Imagen'

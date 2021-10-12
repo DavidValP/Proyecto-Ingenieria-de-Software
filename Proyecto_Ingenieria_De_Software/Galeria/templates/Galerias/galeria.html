@@ -30,13 +30,13 @@
         <td>{{i.tamaño}}</td>
         <td>{{i.raza}}</td>
         <td>{{i.color_pelaje}}</td>
-        <td>{{i.edad}}</td>
-        {% for e in imagenes %}
-            {% if e.perrito == i.nombre %}
-                <td>{{e.imagen}}</td>
+        <td>{{i.edad}}</td>   
+
+        {% for o in imagenes %}
+            {% if i == o.perrito %}
+                <td><img src="{{o.imagen.url}}" alt="x" width="100" height="100"></td>
             {% endif %}
-        {% endfor %}
-            
+        {% endfor %}       
     </tr>
     </tbody>
 
