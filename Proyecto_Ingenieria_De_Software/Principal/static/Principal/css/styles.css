@@ -41,7 +41,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 244, 98, 58;
+  --bs-primary-rgb: 62, 170, 193;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -600,6 +600,7 @@ progress {
 
 .img-fluid {
   max-width: 100%;
+  max-height: 100%;
   height: auto;
 }
 
@@ -11286,7 +11287,7 @@ body {
 }
 
 .page-section {
-  padding: 8rem 0;
+  padding: 7rem 0;
 }
 
 .text-white-75 {
@@ -11443,3 +11444,73 @@ header.masthead h1, header.masthead .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+
+  div.galeria {
+  border: 1px solid #ccc;
+  }
+  div.galeria:hover {
+  border: 1px solid #777;
+  }
+  div.galeria img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  }
+
+  div.desc {
+  padding: 15px;
+  text-align: center;
+  }
+  * {
+  box-sizing: border-box;
+  }
+  .responsive {
+  padding: 20px;
+  float: left;
+  width: 25%;
+  }
+
+  @media only screen and (max-width: 700px) {
+  
+  .responsive {
+  width: 49.99999%;
+  
+  }
+  }
+  @media only screen and (max-width: 500px) {
+  .responsive {
+  width: 100%;
+  }
+  }
+  .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+  
+  .brand-images ul li a {
+    border: 1px solid #e4e4e4;
+    padding: 10px;
+    color: #333333;
+    width: 100%;
+}
+
+div {
+  display: block;
+}
+
+
+.brand-item .am-image-wrapper {
+    height: 100px;
+}
+
+.brand-images li.brand-item {
+  list-style-type: none;
+  text-align: center;
+}
+
+a, .alink {
+  color: #006bb4;
+  text-decoration: none;
+}
+

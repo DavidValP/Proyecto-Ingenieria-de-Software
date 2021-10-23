@@ -1,47 +1,45 @@
 {% extends "Principal/index.html" %}
-
+{% load static %}
 {% block content %}
 
 
-<section class="page-section bg-primary" id="about">
+
+    <section class="page-section bg-primary" id="about">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="text-white mt-0">Galeria</h2>
+                    <hr class="divider divider-light" />
+                    <p class="text-white-75 mb-4">Galeria de nuestros perros</p>
+                    <a class="btn btn-light btn-xl" href="#Galeria">Get Started!</a>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <h1>GALERIA</h1>
-    
-</section>
+    <!-- Galeria-->
+    <body id="page-top">
+    <section class="page-section" id="Galeria">
 
+        <div id="portfolio">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
 
+                    {% for i in mascotas %}
+                    <div class="responsive">
 
-<table class="table table-hover">
-    <thead>
-    <tr>
-        <th scope="col">Nombre</th>
-        <th scope="col">Tamaño</th>
-        <th scope="col">Raza</th>
-        <th scope="col">Color</th>
-        <th scope="col">Edad</th>
-        <th scope="col">Galeria</th>
-    </tr>
-    </thead>
+                        <div class="galeria">
+                            <a class="portfolio-box" target="_blank" href="" title="Project Name">
+                                <img class="img-fluid"  src="{{i.portada.url}}" alt="Texto alternativo imagen 1" >
+                            </a>
+                            <div class="desc">{{i.nombre}}</div>
+                        </div>
+                        
+                    </div>
+                    {% endfor%}
+                    
 
-{% for i in mascotas %}
-    <tbody>
-    <tr>
-        <th scope="row">{{i.nombre}}</th>
-        <td>{{i.tamaño}}</td>
-        <td>{{i.raza}}</td>
-        <td>{{i.color_pelaje}}</td>
-        <td>{{i.edad}}</td>   
-
-        {% for o in imagenes %}
-            {% if i == o.perrito %}
-                <td><img src="{{o.imagen.url}}" alt="x" width="100" height="100"></td>
-            {% endif %}
-        {% endfor %}       
-    </tr>
-    </tbody>
-
-{% endfor %}
-</table>
-
-
+                </div>
+            </div>
+        </div>
 {% endblock %}

@@ -19,6 +19,7 @@ class Perrito(models.Model):
     color_pelaje = models.CharField(max_length=20, null=True, blank=True)
     tamaño = models.ForeignKey(Tamaño, on_delete=models.CASCADE)    
     edad = models.IntegerField(null=True, blank=True)
+    portada = models.ImageField(upload_to='portada',null=True,blank=True)
 
     class Meta:
         verbose_name = 'Perrito'
