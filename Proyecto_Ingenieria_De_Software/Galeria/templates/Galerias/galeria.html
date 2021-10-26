@@ -29,7 +29,7 @@
                     <div class="responsive">
 
                         <div class="galeria">
-                            <a class="portfolio-box" target="_blank" href="" title="Project Name">
+                            <a  href="{% url 'Mascota' %}?mascota={{i.id}}" title="Project Name">
                                 <img class="img-fluid"  src="{{i.portada.url}}" alt="Texto alternativo imagen 1" >
                             </a>
                             <div class="desc">{{i.nombre}}</div>
