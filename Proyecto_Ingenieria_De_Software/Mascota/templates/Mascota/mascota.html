@@ -4,6 +4,7 @@
 
 
 <section class="page-section bg-primary" id="about">
+<<<<<<< HEAD
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-8 text-center">
@@ -84,6 +85,39 @@
         <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
 	    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>    
     </body>       
+=======
+    
+    <h1>Mascota: {{ perrito.nombre }}</h1>
+    
+</section>
+
+<div>
+ 
+    <h2>DATOS</h2>
+    <img src="{{perrito.portada.url}}" alt="x" width="100" height="100">
+    <h3><p>ID: {{ perrito.id }}</p> </h3>
+    <h3><p>Raza: {{ perrito.raza }}</p> </h3>
+    <h3><p>Pelaje: {{ perrito.color_pelaje }}</p> </h3>
+    <h3><p>Tamaño: {{ perrito.tamaño }}</p> </h3>
+    <h3><p>Edad: {{ perrito.edad }}</p> </h3>
+</div> 
+
+<div>
+    <br>
+    <h2>GALERIA</h2>
+        <table>
+            <tr>
+        {% for i in imagenes %}
+           {% if perrito == i.perrito %}
+                <td><img src="{{i.imagen.url}}" alt="x" width="100" height="100"></td>
+            {% endif %} 
+        {% endfor %} 
+            </tr>
+        </table>
+</div>
+
+</div>
+>>>>>>> c7700207c8ab950cf634af8f330b0107d8a8af43
 
 
 {% endblock %}
