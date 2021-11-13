@@ -32,6 +32,11 @@ class PerritoImagenes(models.Model):
     perrito = models.ForeignKey(Perrito, on_delete=models.CASCADE)
     imagen = models.ImageField(upload_to="perritos", null=True, blank=True)
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
     class Meta:
         verbose_name = 'Imagen'
         verbose_name_plural = 'Imagenes'

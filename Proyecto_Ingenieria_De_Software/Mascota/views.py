@@ -1,4 +1,5 @@
 from django.shortcuts import render
+<<<<<<< HEAD
 from Mascota.models import Perrito, PerritoImagenes
 from django.db.models import Q
 
@@ -14,3 +15,9 @@ def Mascota(request):
 
 
     return render(request, 'Mascota/mascota.html', {'perrito':perrito, 'imagenes':imagenes_perrito, 'nombre_perrito':id_perrito} )
+=======
+
+# Create your views here.
+def Mascota(request):
+    return render(request, 'Mascota/mascota.html')
+>>>>>>> origin/main
