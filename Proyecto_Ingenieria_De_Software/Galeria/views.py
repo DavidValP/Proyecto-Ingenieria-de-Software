@@ -5,6 +5,5 @@ from Mascota.models import Perrito, PerritoImagenes
 def Galeria(request):
 
     mascotas = Perrito.objects.all()#importamos todos los registros de perritos
-    imagenes = PerritoImagenes.objects.all()
 
-    return render(request, 'Galerias/galeria.html', {'mascotas':mascotas, 'imagenes':imagenes})
+    return render(request, 'Galerias/galeria.html', {'mascotas':mascotas})

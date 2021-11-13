@@ -1,12 +1,89 @@
 {% extends "Principal/index.html" %}
-
+{% load static %}
 {% block content %}
 
 
 <section class="page-section bg-primary" id="about">
-    
-    <h1>Mascota</h1>
-    
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1  class="text-white mt-0"><b>Mascota</b> </h1>
+                <h2 class="text-white mt-0">{{ perrito.nombre }}</h2>
+                <hr class="divider divider-light" />
+                
+            </div>
+        </div>
+    </div>
 </section>
+
+
+    <body>
+        <br>
+        <div class="contenedor">
+            <main class="contenido-principal" id="Datos">   
+                
+                <img class="contenido-principal__imagen" src="{{perrito.portada.url}}" alt="x" >
+                <div class="contenido-principal__contenedor">
+                    
+                    <h3><p class="contenido-principal__resumen">Raza: {{ perrito.raza }}</p> </h3>
+                    <h3><p class="contenido-principal__resumen">Pelaje: {{ perrito.color_pelaje }}</p> </h3>
+                    <h3><p class="contenido-principal__resumen">Tamaño: {{ perrito.tamaño }}</p> </h3>
+                    <h3><p class="contenido-principal__resumen">Edad: {{ perrito.edad }}</p> </h3>
+                </div>
+            </main> 
+            <br>
+            <br>
+            <br>
+
+
+
+            <h2 class="contenido-principal__resumen" id="Galeria" >GALERIA</h2>
+            <br>
+            <br>
+            <br>
+            
+            <div class="carousel">
+                <div class="carousel__contenedor">
+                    <button aria-label="Anterior" class="carousel__anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="carousel__lista">
+
+                        {% for i in imagenes %} 
+                        
+                        <div class="responsive">     
+                                    <div class="carousel__elemento" >
+                                        {% if perrito == i.perrito %}
+                                        <div class="gallery">
+                                           
+                                            <img class="zoom-img" src="{{i.imagen.url}}" alt="x" >
+                                        
+                                        </div>
+                                        {% endif %}
+                                    </div> 
+                                    
+                        </div>
+                            
+                        
+                        {% endfor %}
+                    </div>
+
+                    
+                    <button aria-label="Siguiente" class="carousel__siguiente">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div role="tablist" class="carousel__indicadores"></div>
+
+            </div>
+
+        </div> 
+
+        <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+	    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>    
+    </body>       
+
 
 {% endblock %}
